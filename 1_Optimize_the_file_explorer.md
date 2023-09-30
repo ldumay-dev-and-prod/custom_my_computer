@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 [<== Revenir à la page principale du projet](../../)
 
 # Optimiser l'explorateur de fichier
@@ -12,13 +14,13 @@ Dans l'idée de rendre l'explorateur de fichier plus agréable à utiliser, il e
     - [2.2 - Masquer l’ensemble des répertoires et fichiers cachés](#22---masquer-lensemble-des-répertoires-et-fichiers-cachés)
 - [3 - Sur Linux](#3---sur-linux)
 
-## 1 - Sur Windows
+## 1 - Sur Windows - [Haut de page](#top)
 
 _**A venir...**_
 
-## 2 - Sur Mac OS
+## 2 - Sur Mac OS - [Haut de page](#top)
 
-### 2.1 - Afficher l’ensemble des répertoires et fichiers cachés
+### 2.1 - Afficher l’ensemble des répertoires et fichiers cachés - [Haut de page](#top)
 
 Pour afficher l’ensemble des répertoires et fichiers cachés sur **Mac OS**, il faut passer par l’outil **Terminal**.
 
@@ -44,7 +46,7 @@ Le Finder dois se redémmarer.
 
 Désormais, tous les fichiers et répertoires cachés s’afficheront quel que soit l’emplacement où ils se situent.
 
-### 2.2 - Masquer l’ensemble des répertoires et fichiers cachés
+### 2.2 - Masquer l’ensemble des répertoires et fichiers cachés - [Haut de page](#top)
 
 A l'inverse, pour masquer l’ensemble des répertoires et fichiers cachés, il suffit de saisir la même commande indiquée plus haut en remplaçant la valeur **true** par **false**, tel que :
 
@@ -60,6 +62,6 @@ kill all Finder
 
 Voilà, les fichiers et répertoires cachés ne s’afficheront plus.
 
-## 3 - Sur Linux
+## 3 - Sur Linux - [Haut de page](#top)
 
 _**A venir...**_
