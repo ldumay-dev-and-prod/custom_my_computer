@@ -17,198 +17,288 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
 [Haut de page](#top)
 
 - Sur Windows
-    - [1.1 - php & xdebug](#11---php--xdebug)
-        - **php** & **xdebug**
+    - [1.1 - Insllation de Composer & Php & Xdebug](#11---insllation-de-composer--php--xdebug)
+        - **php** & **xdebug** & **composer**
+        - [1.1.1 - Télécharger PHP 8.1 et Composer pour Windows](#111---télécharger-php-81-et-composer-pour-windows)
+        - [1.1.2 - Installation de PHP 8.1](#112---installation-de-php-81)
+        - [1.1.3 - Installer Composer et ajouter PHP 8.1 au Path](#113---installer-composer-et-ajouter-php-81-au-path)
+        - [1.1.4 - Installer Xedbug](#114---installer-xedbug)
+        - [1.1.5 - Activer OPcache](#115---activer-opcache)
+        - [1.1.6 - Vérifier l'installation de PHP 8.1 et Composer](#116---vérifier-linstallation-de-php-81-et-composer)
+            - [1.1.6.1 - PHP 8.1](#1171---php-81)
+            - [1.1.6.2 - Composer](#1172---composer)
 - Sur Mac OS
     - [2.1 - Xcode](#21---xcode)
     - [2.2 - Homebrew](#22---homebrew)
     - [2.3 - Packages utiles](#23---packages-utiles)
-        - **zip** & **wget** & **nano** & **tree** & **git** & **gcc**
-        - **php** & **apcu** & **xdebug**
+        - Déjà sur Mac OS : **curl**
+        - **zip** & **unzip** & **wget** & **nano** & **tree** & **git** & **gcc**
+        - **composer** & **php** & **apcu** & **xdebug**
+- Sur Linux
+    - [3.1 - Présentation des scripts](#31---présentation-des-scripts)
+        - **curl** & **wget** & **nano** & **zip** & **unzip** & **git** & **tree** & **libpcre3**
+        - **python** & **c/c++** & **c#** & **java** & **nodejs** & **npm** & **php** & **composer** & **ruby**
+    - [3.2 - Script d'installation des packages](#32---script-dinstallation-des-packages)
+    - [3.3 - Script de vérification des packages installés](#33---script-de-vérification-des-packages-installés)
+    - [3.4 - Script de désinstallation des packages](#34---script-de-désinstallation-des-packages)
 
 ## 1 - Sur Windows
 [Haut de page](#top)
 
-_**A venir...**_
+### 1.1 - Insllation de Composer & Php & Xdebug
+[Haut de page](#top)
 
-### 1.1 - php & xdebug
+#### 1.1.1 - Télécharger PHP 8.1 et Composer pour Windows
+[Haut de page](#top)
 
-#### 1.1.1 - Configuration du Php.ini
+- Télécharger PHP 8.1 :
+    - [Zip VS16 x64 Thread Safe](https://windows.php.net/download/).
+- Télécharger Composer :
+    - [Composer-Setup.exe](https://getcomposer.org/download/)
 
-Le fichier `php.ini` se trouve dans le dossier `/usr/local/etc/php/<votre_version>`.
+#### 1.1.2 - Installation de PHP 8.1
+[Haut de page](#top)
 
-#### 1.1.2 - Configuration du Php.ini
+Décompresser et copier les contenu de fichier **zip** dans un nouvau dossier : `C:\php\8.1.10`.
 
-```
-[mail function]
-; For Win32 only.
-; https://php.net/smtp
-SMTP = <serveur_smtp_hote>
-; https://php.net/smtp-port
-smtp_port = <serveur_smtp_port>
+#### 1.1.3 - Installer Composer et ajouter PHP 8.1 au Path
+[Haut de page](#top)
 
-; For Win32 only.
-; https://php.net/sendmail-from
-sendmail_from = <serveur_smtp_mail_envoi>
+Executer le fichier **Composer-Setup.exe**
 
-; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
-; https://php.net/sendmail-path
-;sendmail_path = <adresse_de_outil>
+![img](images/php_composer_xdebug/001.png)
 
-; Force the addition of the specified parameters to be passed as extra parameters
-; to the sendmail binary. These parameters will always replace the value of
-; the 5th parameter to mail().
-;mail.force_extra_parameters =
+Choisissez votre choix d'installation.
 
-; Add X-PHP-Originating-Script: that will include uid of the script followed by the filename
-mail.add_x_header = Off
+![img](images/php_composer_xdebug/002.png)
 
-; The path to a log file that will log all mail() calls. Log entries include
-; the full path of the script, line number, To address and headers.
-;mail.log =
-; Log mail to syslog (Event Log on Windows).
-;mail.log = syslog
-```
+Choisissez le mode **developper** si vous voulez plus 😉 (j'ai pas test encore, déso 😁).
 
-#### 1.1.3 - Gestion du service Php
+![img](images/php_composer_xdebug//003.png" max-with="330px"/>
 
-1. Démarrer le service Php :
+Normalement, l'installeur de composer détecte de lui-même l'installation de php. Si ce n'est pas le cas, choisissez le dossier en question ou réinstaller PHP.
 
-    ```
-    apachectl start
-    ```
-2. Stopper le service Php :
+De plus, si cela n'est pas le cas, Composer vous propose d'ajouter PHP à votre Path (une des variables de votre environement de développement).
 
-    ```
-    apachectl stop
-    ```
+Cela vous permettra d'accéder à Php via une console.
 
-3. Redémarrer le service Php :
+![img](images/php_composer_xdebug/004.png)
 
-    ```
-    apachectl restart
-    ```
-    
-#### 1.1.4 - Installation de Xdebug
+Non testé 🤷‍♂️😜.
 
-> Si besoin, la doc. **Xdebug** se trouve ici : [https://xdebug.org/docs/install#pecl](https://xdebug.org/docs/install).
+![img](images/php_composer_xdebug/005.png)
 
-Afin de pouvoir installer **Xdebug** sur macOS, il est nécessaire d'avoir **Homebrew** et **PECL** d'installer.
+Lance maintenant l'installation.
 
-> **NB : PECL** est nativement installé sur macOS, tel que **PHP**.
+![img](images/php_composer_xdebug/006.png)
 
-Vérifions cela :
+Voilà, c'est finis. 💪
 
-##### ==> **Hombrew** avec la commande `brew`.
+#### 1.1.4 - Installer Xedbug
+[Haut de page](#top)
+
+Dans le git, je propose une dossier composé d'un fichier php chargé de la fonction `phpinfo()` dont à besion pour vérifié la version et l'installation de notre PHP.
+
+Rener-vous dans le dossier :
 
 ```
-~ % brew
-
-Example usage:
-  brew search TEXT|/REGEX/
-  brew info [FORMULA|CASK...]
-  brew install FORMULA|CASK...
-  brew update
-  brew upgrade [FORMULA|CASK...]
-  brew uninstall FORMULA|CASK...
-  brew list [FORMULA|CASK...]
-
-Troubleshooting:
-  brew config
-  brew doctor
-  brew install --verbose --debug FORMULA|CASK
-
-Contributing:
-  brew create URL [--no-fetch]
-  brew edit [FORMULA|CASK...]
-
-Further help:
-  brew commands
-  brew help [COMMAND]
-  man brew
-  https://docs.brew.sh
+> cd .\guide_php_composer_xdebug\phpinfo\
 ```
 
-##### ==> **PECL** avec la commande `pecl `
+Lancer une petit serveur HTTP avec php pour pouvoir lire la configuration lu par `phpinfo()`.
 
 ```
-~ % pecl
-
-Commands:
-build                  Build an Extension From C Source
-bundle                 Unpacks a Pecl Package
-channel-add            Add a Channel
-channel-alias          Specify an alias to a channel name
-channel-delete         Remove a Channel From the List
-channel-discover       Initialize a Channel from its server
-channel-info           Retrieve Information on a Channel
-channel-login          Connects and authenticates to remote channel server
-channel-logout         Logs out from the remote channel server
-channel-update         Update an Existing Channel
-clear-cache            Clear Web Services Cache
-config-create          Create a Default configuration file
-config-get             Show One Setting
-config-help            Show Information About Setting
-config-set             Change Setting
-config-show            Show All Settings
-convert                Convert a package.xml 1.0 to package.xml 2.0 format
-cvsdiff                Run a "cvs diff" for all files in a package
-cvstag                 Set CVS Release Tag
-download               Download Package
-download-all           Downloads each available package from the default channel
-info                   Display information about a package
-install                Install Package
-list                   List Installed Packages In The Default Channel
-list-all               List All Packages
-list-channels          List Available Channels
-list-files             List Files In Installed Package
-list-upgrades          List Available Upgrades
-login                  Connects and authenticates to remote server [Deprecated in favor of channel-login]
-logout                 Logs out from the remote server [Deprecated in favor of channel-logout]
-makerpm                Builds an RPM spec file from a PEAR package
-package                Build Package
-package-dependencies   Show package dependencies
-package-validate       Validate Package Consistency
-pickle                 Build PECL Package
-remote-info            Information About Remote Packages
-remote-list            List Remote Packages
-run-scripts            Run Post-Install Scripts bundled with a package
-run-tests              Run Regression Tests
-search                 Search remote package database
-shell-test             Shell Script Test
-sign                   Sign a package distribution file
-svntag                 Set SVN Release Tag
-uninstall              Un-install Package
-update-channels        Update the Channel List
-upgrade                Upgrade Package
-upgrade-all            Upgrade All Packages [Deprecated in favor of calling upgrade with no parameters]
-Usage: pecl [options] command [command-options] <parameters>
-Type "pecl help options" to list all options.
-Type "pecl help shortcuts" to list all command shortcuts.
-Type "pecl help version" or "pecl version" to list version information.
-Type "pecl help <command>" to get the help for the specified command.
+> php -S localhost:8080
+[Tue Sep 27 23:43:49 2022] PHP 7.4.26 Development Server (http://localhost:8080) started
+[Tue Sep 27 23:43:53 2022] [::1]:2602 Accepted
+[Tue Sep 27 23:43:53 2022] [::1]:2603 Accepted
+[Tue Sep 27 23:43:53 2022] [::1]:2602 [200]: GET /
+[Tue Sep 27 23:43:53 2022] [::1]:2602 Closing
+[Tue Sep 27 23:43:55 2022] [::1]:2603 [404]: GET /sw.js - No such file or directory
+[Tue Sep 27 23:43:55 2022] [::1]:2603 Closing
 ```
 
-Une fois **PECL** et **HomeBrew** installés, il faut est maintenant possible d'installer **Xdebug** grâce à **PECL**
+Une fois le serveur HTTP lancer, aller sur [http://localhost:8080](http://localhost:8080)
+
+Voici une apperçu :
+
+![img](images/php_composer_xdebug/007.png)
+
+- Sélectionné toute la page avec : `CTRL` + `A`
+
+![img](images/php_composer_xdebug/008.png)
+
+- Copier toute la page avec : `CTRL` + `C`
+
+- Aller sur [https://xdebug.org/wizard](https://xdebug.org/wizard)
+
+![img](images/php_composer_xdebug/009.png)
+
+- Coller toute la page avec : `CTRL` + `V`
+
+![img](images/php_composer_xdebug/010.png)
+
+- Suiver ensuite les instructions afficher.
+
+Dans l'exemple :
+
+- **Instructions** :
+  1. Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
+  2. Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
+  3. Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
+  4. Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
+
+![img](images/php_composer_xdebug/011.png)
+
+- Fichier téléchargé.
+
+![img](images/php_composer_xdebug/012.png)
+
+- Fichier renommé et déplacé.
+
+![img](images/php_composer_xdebug/013.png)
+
+- Ligne ajouté.
+
+- Accès : [http://localhost:8080](http://localhost:8080)
+
+![img](images/php_composer_xdebug/014.png)
+
+![img](images/php_composer_xdebug/015.png)
+
+Voilà, Xdebug est installé. 😎💪
+
+#### 1.1.5 - Activer OPcache
+[Haut de page](#top)
+
+Rechercher `zend_extension` et si il y a un `;` devant `zend_extension=xdebug`, retirer le.
+
+Vous dévrier obtenir cela :
+
+![img](images/php_composer_xdebug/016.png)
+
+Activer en retirant les `;` aux début des lignes :
 
 ```
-pecl install xdebug
-
-ou
-
-pecl install xdebug-<version>
+opcache.memory_consumption=128
+opcache.interned_strings_buffer=8
+opcache.max_accelerated_files=4000
+opcache.revalidate_freq=60
+opcache.fast_shutdown=1
+opcache.enable_cli=1
 ```
 
-> Pour **PHP** 7.1.33, la version 2.9.8 de **Xdebug** est bien compatible.
-> Nécessaire pour **Valet** non compatible avec **PHP** 7.2 ou +.
+![img](images/php_composer_xdebug/017.png)
 
-L'installation devrais se terminée avec le message ci-dessous :
+Voilàa, OPcache est activer 😉.
+
+#### 1.1.6 - Vérifier l'installation de PHP 8.1 et Composer
+[Haut de page](#top)
+
+Ouvrer une console et effectuer les commandes suivantes :
+
+- pour vérifier Php : `php -v`
+- pour vérifier Cmposer : `composer -v`
+
+##### 1.1.6.1 - PHP 8.1
+[Haut de page](#top)
+
+Si Php est bien installé, voici que votre console afficher :
 
 ```
-Build process completed successfully
-Installing '/usr/local/Cellar/php/8.1.5/pecl/20210902/xdebug.so'
-install ok: channel://pecl.php.net/xdebug-3.1.4
-Extension xdebug enabled in php.ini
+> php -v
+```
+
+Si PHP est installé sans Xdebug et OPcache
+
+```
+PHP 8.1.10 (cli) (built: Aug 30 2022 18:05:49) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.1.10, Copyright (c) Zend Technologies
+```
+
+Si PHP est installé avec Xdebug et sans OPcache
+
+```
+PHP 7.4.26 (cli) (built: Nov 16 2021 18:15:31) ( ZTS Visual C++ 2017 x64 )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Xdebug v3.1.5, Copyright (c) 2002-2022, by Derick Rethans
+```
+
+Si PHP est installé avec Xdebug et OPcache
+
+```
+PHP 8.1.10 (cli) (built: Aug 30 2022 18:05:49) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.1.10, Copyright (c) Zend Technologies
+    with Xdebug v3.1.5, Copyright (c) 2002-2022, by Derick Rethans
+    with Zend OPcache v8.1.10, Copyright (c), by Zend Technologies
+```
+
+##### 1.1.6.2 - Composer
+
+```
+> composer -v
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.4.2 2022-09-14 16:11:15
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer.json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packages
+  browse               [home] Opens the package's repository URL or homepage in your browser
+  bump                 Increases the lower limit of your composer.json requirements to the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be installed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HOME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available, including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from being installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs them
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file        
+  validate             Validates a composer.json and composer.lock
 ```
 
 ## 2 - Sur Mac OS
@@ -264,8 +354,8 @@ Un nombre important de paquets est disponible, il suffit de taper `brew search` 
 Voici une suite commande pour installer plusieurs paquets utiles pour le développement :
 
 ```
-brew install zip wget nano tree git gcc
-brew install php@7.2 php@7.3 php@8.0 php@8.3
+brew install zip unzip wget nano tree git gcc
+brew install composer php@7.2 php@7.3 php@8.0 php@8.3
 pecl install apcu xdebug zip
 ```
 
@@ -286,4 +376,63 @@ pecl install apcu xdebug zip
 ## 3 - Sur Linux
 [Haut de page](#top)
 
-_**A venir...**_
+Pour Linux, j'ai ancienement préparer plusieurs petits scripts d'installation de packages pour **Ubuntu**. Testé pour la version **22.04**, mais il est nécessaire de les testés pour les autres versions.
+
+### 3.1 - Présentation des scripts
+
+Le script principal a pour but d'installer tous les outils nécessaires au développement sur Ubuntu 22.04 selon les besoins de l'utilisateur.
+<br/>Il installe les paquets et kits de développement suivants :
+- les outils de ligne de commandes
+  - de curl & wget (permet de gérer les téléchargements)
+  - de nano (permet de gérer les fichiers)
+  - de zip & unzip (permet de gérer les archives)
+  - de git (permet de gérer les dépôts git)
+  - de tree (permet de visualiser les dossiers sous forme d'arbre)
+  - de libpcre3 (permet de gérer les expressions régulières)
+- les kits de développement
+  - de Python ***(latest)***
+  - de C / C++ ***(latest)***
+  - de C# ***(latest)***
+  - de Java ***(latest LTS)***
+  - de NodeJS & NPM
+  - de PHP
+    - **7.4** ou **latest**
+    - avec **Xdebug** && **OPCache**
+    - avec **Composer**
+  - de Ruby
+
+Pour les utilisers, cloner le git sur votre machine et effectuer suiver les instructions ci-dessous.
+
+> **NB :**
+> - Les scripts sont disponibles dans le dossier `/scripts/installer/`.
+> - Les scripts sont à lancer en tant qu'utilisateur `root`.
+
+### 3.2 - Script d'installation des packages
+
+Voici le script à lancer :
+
+> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+
+```
+sudo sh ubuntu_install_full.sh                  
+```
+
+### 3.3 - Script de vérification des packages installés
+
+Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
+
+> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+
+```
+sudo sh ubuntu_check_version.sh
+```
+
+### 3.4 - Script de désinstallation des packages
+
+Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
+
+> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+
+```
+sudo sh ubuntu_uninstall_full.sh
+```

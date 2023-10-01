@@ -14,9 +14,9 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
         - **Mac OS** : _**✅ Terminé**_
         - **Linux** : _**❌ A venir...**_
 - [2 - Packages de base pour le développement](2_Packages.md)
-    - Pour **Windows** : _**❌ A venir...**_
+    - Pour **Windows** : _**🔄 A vérifier**_
     - Pour **Mac OS** : _**✅ Terminé**_
-    - Pour **Linux** : _**❌ A venir...**_
+    - Pour **Linux** : _**✅ Terminé**_
 - [3 - Oh My Posh ! Personnalisation du terminal](3_Oh_My_Posh.md)
     - Pour **Windows** :  _**✅ Terminé**_
     - Pour **Mac OS** : _**✅ Terminé**_
