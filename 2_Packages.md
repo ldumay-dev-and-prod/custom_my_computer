@@ -9,46 +9,46 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
 ## Sommaire
 
 - [1 - Liste des packages](#1---liste-des-packages)
-- [1 - Sur Windows](#1---sur-windows)
-- [2 - Sur Mac OS](#2---sur-mac-os)
-- [3 - Sur Linux](#3---sur-linux)
+- [2 - Sur Windows](#1---sur-windows)
+- [3 - Sur Mac OS](#2---sur-mac-os)
+- [4 - Sur Linux](#3---sur-linux)
 
 ## 1 - Liste des packages
 [Haut de page](#top)
 
 - Sur Windows
-    - [1.1 - Insllation de Composer & Php & Xdebug](#11---insllation-de-composer--php--xdebug)
+    - [2.1 - Insllation de Composer & Php & Xdebug](#11---insllation-de-composer--php--xdebug)
         - **php** & **xdebug** & **composer**
-        - [1.1.1 - Télécharger PHP 8.1 et Composer pour Windows](#111---télécharger-php-81-et-composer-pour-windows)
-        - [1.1.2 - Installation de PHP 8.1](#112---installation-de-php-81)
-        - [1.1.3 - Installer Composer et ajouter PHP 8.1 au Path](#113---installer-composer-et-ajouter-php-81-au-path)
-        - [1.1.4 - Installer Xedbug](#114---installer-xedbug)
-        - [1.1.5 - Activer OPcache](#115---activer-opcache)
-        - [1.1.6 - Vérifier l'installation de PHP 8.1 et Composer](#116---vérifier-linstallation-de-php-81-et-composer)
-            - [1.1.6.1 - PHP 8.1](#1161---php-81)
-            - [1.1.6.2 - Composer](#1162---composer)
+        - [2.1.1 - Télécharger PHP 8.1 et Composer pour Windows](#111---télécharger-php-81-et-composer-pour-windows)
+        - [2.1.2 - Installation de PHP 8.1](#112---installation-de-php-81)
+        - [2.1.3 - Installer Composer et ajouter PHP 8.1 au Path](#113---installer-composer-et-ajouter-php-81-au-path)
+        - [2.1.4 - Installer Xedbug](#114---installer-xedbug)
+        - [2.1.5 - Activer OPcache](#115---activer-opcache)
+    - [2.2 - Vérifier l'installation de PHP 8.1 et Composer](#116---vérifier-linstallation-de-php-81-et-composer)
+        - [2.2.1 - PHP 8.1](#1161---php-81)
+        - [2.2.2 - Composer](#1162---composer)
 - Sur Mac OS
-    - [2.1 - Xcode](#21---xcode)
-    - [2.2 - Homebrew](#22---homebrew)
-    - [2.3 - Packages utiles](#23---packages-utiles)
+    - [3.1 - Xcode](#21---xcode)
+    - [3.2 - Homebrew](#22---homebrew)
+    - [3.3 - Packages utiles](#23---packages-utiles)
         - Déjà sur Mac OS : **curl**
         - **zip** & **unzip** & **wget** & **nano** & **tree** & **git** & **gcc**
         - **composer** & **php** & **apcu** & **xdebug**
 - Sur Linux
-    - [3.1 - Présentation des scripts](#31---présentation-des-scripts)
+    - [4.1 - Présentation des scripts](#31---présentation-des-scripts)
         - **curl** & **wget** & **nano** & **zip** & **unzip** & **git** & **tree** & **libpcre3**
         - **python** & **c/c++** & **c#** & **java** & **nodejs** & **npm** & **php** & **composer** & **ruby**
-    - [3.2 - Script d'installation des packages](#32---script-dinstallation-des-packages)
-    - [3.3 - Script de vérification des packages installés](#33---script-de-vérification-des-packages-installés)
-    - [3.4 - Script de désinstallation des packages](#34---script-de-désinstallation-des-packages)
+    - [4.2 - Script d'installation des packages](#32---script-dinstallation-des-packages)
+    - [4.3 - Script de vérification des packages installés](#33---script-de-vérification-des-packages-installés)
+    - [4.4 - Script de désinstallation des packages](#34---script-de-désinstallation-des-packages)
 
-## 1 - Sur Windows
+## 2 - Sur Windows
 [Haut de page](#top)
 
-### 1.1 - Insllation de Composer & Php & Xdebug
+### 2.1 - Insllation de Composer & Php & Xdebug
 [Haut de page](#top)
 
-#### 1.1.1 - Télécharger PHP 8.1 et Composer pour Windows
+#### 2.1.1 - Télécharger PHP 8.1 et Composer pour Windows
 [Haut de page](#top)
 
 - Télécharger PHP 8.1 :
@@ -56,12 +56,12 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
 - Télécharger Composer :
     - [Composer-Setup.exe](https://getcomposer.org/download/)
 
-#### 1.1.2 - Installation de PHP 8.1
+#### 2.1.2 - Installation de PHP 8.1
 [Haut de page](#top)
 
 Décompresser et copier les contenu de fichier **zip** dans un nouvau dossier : `C:\php\8.1.10`.
 
-#### 1.1.3 - Installer Composer et ajouter PHP 8.1 au Path
+#### 2.1.3 - Installer Composer et ajouter PHP 8.1 au Path
 [Haut de page](#top)
 
 Executer le fichier **Composer-Setup.exe**
@@ -94,7 +94,7 @@ Lance maintenant l'installation.
 
 Voilà, c'est finis. 💪
 
-#### 1.1.4 - Installer Xedbug
+#### 2.1.4 - Installer Xedbug
 [Haut de page](#top)
 
 Dans le git, je propose une dossier composé d'un fichier php chargé de la fonction `phpinfo()` dont à besion pour vérifié la version et l'installation de notre PHP.
@@ -168,7 +168,7 @@ Dans l'exemple :
 
 Voilà, Xdebug est installé. 😎💪
 
-#### 1.1.5 - Activer OPcache
+#### 2.1.5 - Activer OPcache
 [Haut de page](#top)
 
 Rechercher `zend_extension` et si il y a un `;` devant `zend_extension=xdebug`, retirer le.
@@ -192,7 +192,7 @@ opcache.enable_cli=1
 
 Voilàa, OPcache est activer 😉.
 
-#### 1.1.6 - Vérifier l'installation de PHP 8.1 et Composer
+### 2.2 - Vérifier l'installation de PHP 8.1 et Composer
 [Haut de page](#top)
 
 Ouvrer une console et effectuer les commandes suivantes :
@@ -200,7 +200,7 @@ Ouvrer une console et effectuer les commandes suivantes :
 - pour vérifier Php : `php -v`
 - pour vérifier Cmposer : `composer -v`
 
-##### 1.1.6.1 - PHP 8.1
+#### 2.2.1 - PHP 8.1
 [Haut de page](#top)
 
 Si Php est bien installé, voici que votre console afficher :
@@ -236,7 +236,7 @@ Zend Engine v4.1.10, Copyright (c) Zend Technologies
     with Zend OPcache v8.1.10, Copyright (c), by Zend Technologies
 ```
 
-##### 1.1.6.2 - Composer
+#### 2.2.2 - Composer
 
 ```
 > composer -v
@@ -301,16 +301,16 @@ Available commands:
   validate             Validates a composer.json and composer.lock
 ```
 
-## 2 - Sur Mac OS
+## 3 - Sur Mac OS
 [Haut de page](#top)
 
 Voici une liste de packages utiles pour le développement sur **Mac OS** :
 
-- [2.1 - Xcode](#21---xcode)
-- [2.2 - Homebrew](#22---homebrew)
-- [2.3 - Packages utiles](#23---packages-utiles)
+- [3.1 - Xcode](#21---xcode)
+- [3.2 - Homebrew](#22---homebrew)
+- [3.3 - Packages utiles](#23---packages-utiles)
 
-### 2.1 - Xcode
+### 3.1 - Xcode
 [Haut de page](#top)
 
 Sur Mac OS, il est nécessaire d'installer **Xcode** pour pouvoir installer **Homebrew** ou la plupart des packages.
@@ -323,7 +323,7 @@ Ensuite, il est nécessaire d'installer les outils en ligne de commande :
 xcode-select --install
 ```
 
-### 2.2 - Homebrew
+### 3.2 - Homebrew
 [Haut de page](#top)
 
 _**A - Qu'est-ce que ?**_
@@ -348,7 +348,7 @@ brew install <paquet>
 
 Un nombre important de paquets est disponible, il suffit de taper `brew search` pour avoir la liste ou de consulter La liste des paquets disponible [ici](https://formulae.brew.sh/formula/).
 
-### 2.2 - Packages utiles
+### 3.2 - Packages utiles
 [Haut de page](#top)
 
 Voici une suite commande pour installer plusieurs paquets utiles pour le développement :
@@ -373,12 +373,12 @@ pecl install apcu xdebug zip
     - `xdebug` - est un débogueur pour PHP
 
 
-## 3 - Sur Linux
+## 4 - Sur Linux
 [Haut de page](#top)
 
 Pour Linux, j'ai ancienement préparer plusieurs petits scripts d'installation de packages pour **Ubuntu**. Testé pour la version **22.04**, mais il est nécessaire de les testés pour les autres versions.
 
-### 3.1 - Présentation des scripts
+### 4.1 - Présentation des scripts
 
 Le script principal a pour but d'installer tous les outils nécessaires au développement sur Ubuntu 22.04 selon les besoins de l'utilisateur.
 <br/>Il installe les paquets et kits de développement suivants :
@@ -407,7 +407,7 @@ Pour les utilisers, cloner le git sur votre machine et effectuer suiver les inst
 > - Les scripts sont disponibles dans le dossier `/scripts/installer/`.
 > - Les scripts sont à lancer en tant qu'utilisateur `root`.
 
-### 3.2 - Script d'installation des packages
+### 4.2 - Script d'installation des packages
 
 Voici le script à lancer :
 
@@ -417,7 +417,7 @@ Voici le script à lancer :
 sudo sh ubuntu_install_full.sh                  
 ```
 
-### 3.3 - Script de vérification des packages installés
+### 4.3 - Script de vérification des packages installés
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 
@@ -427,7 +427,7 @@ Le script ci-dessous désinstallera tous les outils installés dans la liste dé
 sudo sh ubuntu_check_version.sh
 ```
 
-### 3.4 - Script de désinstallation des packages
+### 4.4 - Script de désinstallation des packages
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 

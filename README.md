@@ -21,11 +21,15 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
     - Pour **Windows** :  _**✅ Terminé**_
     - Pour **Mac OS** : _**✅ Terminé**_
     - Pour **Linux** : _**❌ A venir...**_
-- [4 - Un serveur MySQL](4_MySQL_Server.md)
+- [4 - Personnalisation du terminal](4_Terminal.md)
     - Pour **Windows** : _**❌ A venir...**_
     - Pour **Mac OS** : _**✅ Terminé**_
     - Pour **Linux** : _**❌ A venir...**_
-- [5 - Un serveur de mail local](5_Mail_Server.md)
+- [5 - Un serveur MySQL](5_MySQL_Server.md)
+    - Pour **Windows** : _**❌ A venir...**_
+    - Pour **Mac OS** : _**✅ Terminé**_
+    - Pour **Linux** : _**❌ A venir...**_
+- [6 - Un serveur de mail local](6_Mail_Server.md)
     - Pour **Windows** : _**❌ A venir...**_
     - Pour **Mac OS** : _**🔄 A vérifier**_
     - Pour **Linux** : _**❌ A venir...**_

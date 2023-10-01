@@ -1,3 +1,37 @@
+<a name="top"></a>
+
+[<== Revenir à la page principale du projet](../../)
+
+# Personnalisation du terminal
+
+## Sommaire
+
+- [1 - Sur Windows](#1---sur-windows)
+- [2 - Sur Mac OS](#2---sur-mac-os)
+- [3 - Sur Linux](#3---sur-linux)
+
+## 1 - Sur Windows
+[Haut de page](#top)
+
+_**A venir...**_
+
+## 2 - Sur Mac OS
+[Haut de page](#top)
+
+### 2.1 - Ma proposition de personnalisation du terminal
+
+> **Attention** : De nombreux paquets sont nécessaires pour pouvoir utiliser cette configuration, tel que :
+> - HomeBrew
+> - Oh My Posh
+> - Java : JDK 8, 11, 17, 19
+> - PHP
+> - Python
+> - GCC
+> - Fim (File Integrity Manager)
+
+Editier le fichier `~/.zshrc` (ou créer le si il n'existe pas) et ajouter les lignes suivantes :
+
+```bash
 # - - - [Path - Local] - - - 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -118,3 +152,24 @@ echo "Oh My Push - Ready !"
 echo "JAVA - Mise en place d'un version de java par défaut :" 
 jdk_default 1.8.0_333
 echo "Besoin d'aide, commande : help"
+```
+
+Une fois ajouter, sauvegarder et fermer le fichier.
+Puis relancer le terminal. Vous devriez obtenir :
+
+![terminal](images/terminal_zsrhc/001.png)
+
+_Version **Terminal** de Mac OS._
+
+![terminal](images/terminal_zsrhc/002.png)
+
+_Version **iTerm2** de Mac OS._
+
+Celui permet d'effectuer de nombreuses actions :
+
+![terminal](images/terminal_zsrhc/003.png)
+
+## 3 - Sur Linux
+[Haut de page](#top)
+
+_**A venir...**_
