@@ -1,0 +1,86 @@
+Suppression d'annciens dépôts non utilisés :
+
+- ldumay/ldumay_app_web_the_translator
+- ldumay/ldumay_app_java_monitor_activity
+- ldumay/web_app_crossplatform
+- ldumay/web_api_crossplatform
+
+- ldumay/app_react_full_bases_bootstrap
+- ldumay/ldumay_app_test_next.js_based_on_react
+- ldumay/ldumay_my_medias
+- ldumay/ldumay_pdf_php
+- ldumay/ldumay_manager_databases
+- ldumay/ldumay_llamacpp_tests
+- ldumay/ldumay_manager_app
+- ldumay/ldumay_manager_api
+- ldumay/ldumay_packages_java
+- ldumay/3d_Print
+- ldumay/ldumay_web_maintenance
+- ldumay/ldumay_domain_dev
+- ldumay/ldumay_nodejs
+- ldumay/ManagerLdumayFR
+- ldumay/webkit_ldumay
+- ldumay/LDumay_Monitor
+- ldumay_my_web_site
+- ldumay/ldumay_my_web_site
+- ldumay/java_android_pointage_tracking
+- ldumay/ldumay_docker_all
+- ldumay/ldumay_car_pression
+- ldumay/ldumay_java_app_conversion
+- ldumay/ldumay_symfony_and_laravel
+- ldumay/ldumay_symfony_web_app_starter
+- jenkins_exploration
+- ldumay/2022_android_app_blagues
+- ldumay/2021_Mycar_Demo_Android
+- ldumay/2021_calculatrice_Android
+- ldumay/2021_Castle_Mania_France
+- ldumay/2021_Castle_Mania_France_Serveur
+- ldumay/2021_Castle_Mania_France_Plugin
+- ldumay/business_ldumay
+- ldumay/ldumay_api_with_php
+- ldumay/ldumay_symfony
+- ldumay/ldumay_themes
+- ldumay/chatbot
+- ldumay/ldumay_app_pokedex
+- ldumay/ldumay_app_suivi_de_vie
+- ldumay/ldumay_symfony_full
+- ldumay/ldumay-managers
+- ldumay/ldumay_app_manager
+- ldumay/ldumay_maven_libraries_tester
+- ldumay/ldumay_maven_libraries
+- ldumay/ldumay_app_dotnet_with_avalonia
+- ldumay/ldumay_swift_app_demo
+- ldumay/ldumay_java_centrales_api
+- ldumay/ldumay_java_demos
+- ldumay/ldumay_mycar_dev
+- ldumay/ldumay_my_research
+- ldumay/ldumay_opencore
+- ldumay/ldumay_os_macos_custom_terminal
+- ldumay/ldumay_terminal_windows_powershell_custom
+- ldumay/ldumay_my_windows
+- ldumay/node_server_fastify
+- ldumay/node_bases
+- ldumay/app_react_full_bases_ok
+- ldumay/app_react_full_bases
+- ldumay/mcc_my_company_contacts
+- ldumay/ldumay_java_app_testeur
+- ldumay/app_github_json_reader
+- ldumay/ldumay_app_JsonDataToJsonObject
+- ldumay/ldumay/ldumay_app_react_starter
+- ldumay/ldumay_app_react_native_vaadin
+- ldumay/ldumay_kotlin_app_github_manager
+- ldumay/ldumay_multiplatform_app
+- ldumay/phpmyadmin_ready
+- ldumay/guide_ubuntu_symfony
+- ldumay/guide_linux
+- ldumay/guide_macos
+- ldumay/guide_curl
+- ldumay/guide_jenkins
+- ldumay/guide_php_composer_xdebug
+- ldumay/ldumay_unix_scripts
+
+---
+
+
+
+- ldumay/ldumay_toolbox

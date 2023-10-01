@@ -17,7 +17,15 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
     - Pour **Windows** : _**❌ A venir...**_
     - Pour **Mac OS** : _**✅ Terminé**_
     - Pour **Linux** : _**❌ A venir...**_
-- Oh My Posh ! - [link](#)
+- [Oh My Posh ! Personnalisation du terminal](3_Oh_My_Posh.md)
+    - Pour **Windows** :  _**✅ Terminé**_
+    - Pour **Mac OS** : _**✅ Terminé**_
+    - Pour **Linux** : _**❌ A venir...**_
+- [Un serveur MySQL](4_MySQL_Server.md)
     - Pour **Windows** : _**❌ A venir...**_
-    - Pour **Mac OS** : _**❌ A venir...**_
+    - Pour **Mac OS** : _**✅ Terminé**_
+    - Pour **Linux** : _**❌ A venir...**_
+- [Un serveur de mail local](5_Mail_Server.md)
+    - Pour **Windows** : _**❌ A venir...**_
+    - Pour **Mac OS** : _**🔄 A vérifier**_
     - Pour **Linux** : _**❌ A venir...**_
