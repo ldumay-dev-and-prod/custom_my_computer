@@ -25,8 +25,8 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
         - [1.1.4 - Installer Xedbug](#114---installer-xedbug)
         - [1.1.5 - Activer OPcache](#115---activer-opcache)
         - [1.1.6 - Vérifier l'installation de PHP 8.1 et Composer](#116---vérifier-linstallation-de-php-81-et-composer)
-            - [1.1.6.1 - PHP 8.1](#1171---php-81)
-            - [1.1.6.2 - Composer](#1172---composer)
+            - [1.1.6.1 - PHP 8.1](#1161---php-81)
+            - [1.1.6.2 - Composer](#1162---composer)
 - Sur Mac OS
     - [2.1 - Xcode](#21---xcode)
     - [2.2 - Homebrew](#22---homebrew)
