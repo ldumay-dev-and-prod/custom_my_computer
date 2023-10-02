@@ -1,6 +1,12 @@
-# Guide d'installation de Debian 11 dans une machine virtuelle
+<a name="top"></a>
 
-==> [retour accueil](../..)
+[<== Revenir à la page principale du projet](../../)
+
+# VM - Debian - Installation de Debian
+
+Ceci est guide d'installation de Debian dans une machine virtuelle.
+
+Version utilisée de Debian : **11.0.0**
 
 ## Guide de création d'une machine virtuelle
 

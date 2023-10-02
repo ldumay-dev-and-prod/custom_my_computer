@@ -1,6 +1,10 @@
-# Guide Virtualbox
+<a name="top"></a>
 
-==> [retour accueil](../..)
+[<== Revenir à la page principale du projet](../../)
+
+# Virtualbox
+
+Ce guide à pour but de vous aider _(à installer et)_ utiliser Virtualbox.
 
 ## Créer une machine virtuelle
 

@@ -33,7 +33,10 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
     - Pour **Windows** : _**❌ A venir...**_
     - Pour **Mac OS** : _**🔄 A vérifier**_
     - Pour **Linux** : _**❌ A venir...**_
+- Bonus 0 - Packages et commandes
+    - [Packages et commandes](Bonus0_Packages_and_commands.md)
 - Bonus 1 - OS et machines virtuelles (VM)
+    - [Sources OS](Bonus1_0_Sources_OS.md)
     - [VirtualBox](Bonus1_1_Virtualbox.md)
     - [VM - Debian - Installation de Debian](Bonus1_2_Install_debian.md)
     - [VM - Ubuntu Desktop](Bonus1_3_install_ubuntu-desktop.md)

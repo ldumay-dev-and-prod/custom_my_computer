@@ -1,6 +1,12 @@
-# Guide d'installation d'Ubuntu server 22.04
+<a name="top"></a>
 
-==> [retour accueil](../..)
+[<== Revenir à la page principale du projet](../../)
+
+# VM - Ubuntu Server
+
+Ceci est guide d'installation d'Ubuntu Server dans une machine virtuelle.
+
+Version utilisée de Ubuntu Server : **22.04**
 
 ## Guide de création d'une machine virtuelle
 

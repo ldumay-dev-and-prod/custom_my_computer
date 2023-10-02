@@ -1,6 +1,12 @@
-# Guide d'installation d'Ubuntu Desktop 22.04
+<a name="top"></a>
 
-==> [retour accueil](../..)
+[<== Revenir à la page principale du projet](../../)
+
+# VM - Ubuntu Desktop
+
+Ceci est guide d'installation d'Ubuntu Desktop dans une machine virtuelle.
+
+Version utilisée de Ubuntu Desktop : **22.04**
 
 ## Guide de création d'une machine virtuelle
 
