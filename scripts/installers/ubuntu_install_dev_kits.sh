@@ -1,5 +1,5 @@
 # Lancement du script
-echo "[Script - Ubuntu 22.04 - Dev. kits] Installation des kits de développement"
+echo "[SCRIPT D'INSTALLATION] Installation des kits de développement"
 echo $separateLine
 
 # Si l'utilisateur a choisi d'installer tous les kits de développement

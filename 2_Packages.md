@@ -41,8 +41,9 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
         - **curl** & **wget** & **nano** & **zip** & **unzip** & **git** & **tree** & **libpcre3**
         - **python** & **c/c++** & **c#** & **java** & **nodejs** & **npm** & **php** & **composer** & **ruby**
     - [4.2 - Script d'installation des packages](#42---script-dinstallation-des-packages)
-    - [4.3 - Script de vérification des packages installés](#43---script-de-vérification-des-packages-installés)
-    - [4.4 - Script de désinstallation des packages](#44---script-de-désinstallation-des-packages)
+    - [4.3 - Script d'installation d'applications de développement](#43---script-dinstallation-dapplications-de-développement)
+    - [4.4 - Script de vérification des packages installés](#44---script-de-vérification-des-packages-installés)
+    - [4.5 - Script de désinstallation des packages](#45---script-de-désinstallation-des-packages)
 
 ## 2 - Sur Windows
 [Haut de page](#top)
@@ -103,13 +104,13 @@ Dans le git, je propose une dossier composé d'un fichier php chargé de la fonc
 
 Rener-vous dans le dossier :
 
-```
+```bash
 > cd .\guide_php_composer_xdebug\phpinfo\
 ```
 
 Lancer une petit serveur HTTP avec php pour pouvoir lire la configuration lu par `phpinfo()`.
 
-```
+```bash
 > php -S localhost:8080
 [Tue Sep 27 23:43:49 2022] PHP 7.4.26 Development Server (http://localhost:8080) started
 [Tue Sep 27 23:43:53 2022] [::1]:2602 Accepted
@@ -181,7 +182,7 @@ Vous dévrier obtenir cela :
 
 Activer en retirant les `;` aux début des lignes :
 
-```
+```bash
 opcache.memory_consumption=128
 opcache.interned_strings_buffer=8
 opcache.max_accelerated_files=4000
@@ -207,13 +208,13 @@ Ouvrer une console et effectuer les commandes suivantes :
 
 Si Php est bien installé, voici que votre console afficher :
 
-```
+```bash
 > php -v
 ```
 
 Si PHP est installé sans Xdebug et OPcache
 
-```
+```bash
 PHP 8.1.10 (cli) (built: Aug 30 2022 18:05:49) (ZTS Visual C++ 2019 x64)
 Copyright (c) The PHP Group
 Zend Engine v4.1.10, Copyright (c) Zend Technologies
@@ -221,7 +222,7 @@ Zend Engine v4.1.10, Copyright (c) Zend Technologies
 
 Si PHP est installé avec Xdebug et sans OPcache
 
-```
+```bash
 PHP 7.4.26 (cli) (built: Nov 16 2021 18:15:31) ( ZTS Visual C++ 2017 x64 )
 Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
@@ -230,7 +231,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 
 Si PHP est installé avec Xdebug et OPcache
 
-```
+```bash
 PHP 8.1.10 (cli) (built: Aug 30 2022 18:05:49) (ZTS Visual C++ 2019 x64)
 Copyright (c) The PHP Group
 Zend Engine v4.1.10, Copyright (c) Zend Technologies
@@ -240,7 +241,7 @@ Zend Engine v4.1.10, Copyright (c) Zend Technologies
 
 #### 2.2.2 - Composer
 
-```
+```bash
 > composer -v
    ______
   / ____/___  ____ ___  ____  ____  ________  _____
@@ -321,7 +322,7 @@ Télécharger **Xcode** sur l'App Store, puis lancez-le et suivez les instructio
 
 Ensuite, il est nécessaire d'installer les outils en ligne de commande :
 
-```
+```bash
 xcode-select --install
 ```
 
@@ -336,7 +337,7 @@ _**B - Installation**_
 
 Pour installer homebrew, il suffit d'executer la comande ci-dessous :
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -344,7 +345,7 @@ _**C - Installer un paquet**_
 
 Voici la commande :
 
-```
+```bash
 brew install <paquet>
 ```
 
@@ -355,7 +356,7 @@ Un nombre important de paquets est disponible, il suffit de taper `brew search` 
 
 Voici une suite commande pour installer plusieurs paquets utiles pour le développement :
 
-```
+```bash
 brew install zip unzip wget nano tree git gcc
 brew install composer php@7.2 php@7.3 php@8.0 php@8.3
 pecl install apcu xdebug zip
@@ -387,7 +388,7 @@ Vérifions cela :
 
 ##### ==> **Hombrew** avec la commande `brew`.
 
-```
+```bash
 ~ % brew
 
 Example usage:
@@ -417,7 +418,7 @@ Further help:
 
 ##### ==> **PECL** avec la commande `pecl `
 
-```
+```bash
 ~ % pecl
 
 Commands:
@@ -477,7 +478,7 @@ Type "pecl help <command>" to get the help for the specified command.
 
 Une fois **PECL** et **HomeBrew** installés, il faut est maintenant possible d'installer **Xdebug** grâce à **PECL**
 
-```
+```bash
 pecl install xdebug
 
 ou
@@ -490,7 +491,7 @@ pecl install xdebug-<version>
 
 L'installation devrais se terminée avec le message ci-dessous :
 
-```
+```bash
 Build process completed successfully
 Installing '/usr/local/Cellar/php/8.1.5/pecl/20210902/xdebug.so'
 install ok: channel://pecl.php.net/xdebug-3.1.4
@@ -503,7 +504,7 @@ Pour activer **OPcache**, il faut modifier le fichier de configuration de **PHP*
 
 Pour cela, il faut trouver le fichier de configuration de **PHP**.
 
-```
+```bash
 php -i | grep php.ini
 ```
 
@@ -513,14 +514,14 @@ Le fichier `php.ini` se trouve dans le dossier `/usr/local/etc/php/<votre_versio
 
 Voici un exemple de résultat :
 
-```
+```bash
 Configuration File (php.ini) Path => /usr/local/etc/php/8.1
 Loaded Configuration File => /usr/local/etc/php/8.1/php.ini
 ```
 
 Une fois le fichier de configuration trouver, il faut l'ouvrir avec un éditeur de texte.
 
-```
+```bash
 nano /usr/local/etc/php/8.1/php.ini
 ```
 
@@ -530,7 +531,7 @@ Une fois le fichier ouvert, il faut rechercher `zend_extension` et si il y a un 
 
 Vous dévrier obtenir cela :
 
-```
+```bash
 opcache.memory_consumption=128
 opcache.interned_strings_buffer=8
 opcache.max_accelerated_files=4000
@@ -543,18 +544,18 @@ opcache.enable_cli=1
 
 1. Démarrer le service Php :
 
-```
+```bash
 apachectl start
 ```
 2. Stopper le service Php :
 
-```
+```bash
 apachectl stop
 ```
 
 3. Redémarrer le service Php :
 
-```
+```bash
 apachectl restart
 ```
 
@@ -574,6 +575,7 @@ Le script principal a pour but d'installer tous les outils nécessaires au déve
   - de git (permet de gérer les dépôts git)
   - de tree (permet de visualiser les dossiers sous forme d'arbre)
   - de libpcre3 (permet de gérer les expressions régulières)
+  - de net-tools (permet de gérer les outils réseaux)
 - les kits de développement
   - de Python ***(latest)***
   - de C / C++ ***(latest)***
@@ -585,6 +587,10 @@ Le script principal a pour but d'installer tous les outils nécessaires au déve
     - avec **Xdebug** && **OPCache**
     - avec **Composer**
   - de Ruby
+- les applications de développement
+  - de Valet (peu être obsolète - à vérifier)
+  - de Jenkins
+  - de GitLab CE
 
 Pour les utilisers, cloner le git sur votre machine et effectuer suiver les instructions ci-dessous.
 
@@ -598,26 +604,85 @@ Voici le script à lancer :
 
 > Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
 
-```
+```bash
 sudo sh ubuntu_install_full.sh                  
 ```
 
-### 4.3 - Script de vérification des packages installés
+### 4.3 - Script d'installation d'applications de développement
+
+Voici le script à lancer :
+
+> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+
+```bash
+sudo sh ubuntu_install_dev_apps.sh
+```
+
+#### 4.4.1 - Vérifier de l'installation des applications de développement
+
+Après l'installation des applications de développement, il est nécessaire de les configurer ou de les tester.
+
+_**Pour Valet**_
+
+> **NB :**
+> Si vous obtenez la commande valet introuvable, le chemin du compositeur n'est pas actuellement ajouté. Pour ce faire, nous devons d'abord vérifier le chemin du compositeur existant par la commande suivante
+> Maintenant, ajoutez le chemin (si votre chemin est /root/.composer/ alors il le serait)
+
+```bash
+echo "export PATH=$PATH :/root/.composer/bin" >> ~/.bashrc
+```
+
+_**Pour Jenkins**_
+
+Une fois installé, il est nécessaire de démarrer le service Jenkins.
+
+```bash
+sudo systemctl <action> jenkins.service
+```
+
+> **NB :** `<action>` peut être remplacé par `enable`, `start`, `stop`, `restart`, `status`.
+
+Voir la page de gestion de Jenkins puis suivre les étapes.
+
+> http://localhost:8080
+
+Pour récupérer le mot de passe d'administration, il faut lancer la commande ci-dessous :
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+L'installation devrais se terminer tranquillement.
+
+> **Si besoin** : [Voici un petit guide](https://websiteforstudents.com/how-to-install-jenkins-automation-server-on-ubuntu-16-04-18-04-18-10/)
+
+_**Pour GitLab CE**_
+
+La configuration de gitlab se trouve dans le fichier ci-dessous :
+
+```bash
+cd /etc/gitlab
+vim gitlab.rb
+```
+
+> **Si besoin** : [Voici un petit guide](https://www.howtoforge.com/tutorial/how-to-install-and-configure-gitlab-on-ubuntu-16-04/)
+
+### 4.4 - Script de vérification des packages installés
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 
 > Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
 
-```
+```bash
 sudo sh ubuntu_check_version.sh
 ```
 
-### 4.4 - Script de désinstallation des packages
+### 4.5 - Script de désinstallation des packages
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 
 > Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
 
-```
+```bash
 sudo sh ubuntu_uninstall_full.sh
 ```

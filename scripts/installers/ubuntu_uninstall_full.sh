@@ -5,7 +5,7 @@
 #
 
 # Lancement du script
-echo "[Script - Ubuntu 22.04] Désinstallation des outils installés"
+echo "[SCRIPT DE DESINSTALLATION] Désinstallation des outils installés"
 echo $separateLine
 
 # Désinstallation de Curl & Wget
@@ -78,4 +78,11 @@ echo $separateLine
 echo "==> Kits de développement - Désinstallation de Ruby"
 echo $separateLine
 sudo apt remove ruby
+echo $separateLine
+
+# Fin du script
+echo "[SCRIPT DE DESINSTALLATION] Désinstallation des outils installés terminée"
+echo "Attention - les outils suivants n'ont pas été désinstallés, au vu de leur utilité :"
+echo "--> libpcre3"
+echo "--> net-tools"
 echo $separateLine

@@ -1,6 +1,7 @@
 # Lancement du script
-echo "[Script - Ubuntu 22.04 - Commande line tools] Installation d'outils de ligne de commandes"
+echo "[SCRIPT D'INSTALLATION] Installation d'outils de ligne de commandes"
 echo $separateLine
+
 # Si l'utilisateur a choisi d'installer tous les outils de ligne de commandes
 if [ $all = true ]
 then
@@ -10,6 +11,7 @@ then
     export git=true
     export tree=true
     export libpcre3=true
+    export net_tools=true
 else
     if [ $curl_wget = true ] then export curl_wget=true
     if [ $nano = true ] then export nano=true
@@ -17,7 +19,9 @@ else
     if [ $git = true ] then export git=true
     if [ $tree = true ] then export tree=true
     if [ $libpcre3 = true ] then export libpcre3=true
+    if [ $net_tools = true ] then export net_tools=true
 fi
+
 # Si l'uitlisateur a choisi d'installer Curl & Wget
 if [ $curl_wget = true ]
 then
@@ -64,5 +68,13 @@ then
     echo "==> Commande line tools - Installation de libpcre3"
     echo $separateLine
     sudo apt install libpcre3
+    echo $separateLine
+fi
+# Si l'uitlisateur a choisi d'installer Net-tools
+if [ $net_tools = true ]
+then
+    echo "==> Commande line tools - Installation de Net-tools"
+    echo $separateLine
+    sudo apt install net-tools
     echo $separateLine
 fi

@@ -10,11 +10,13 @@
 export separateLine="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 # Lancement du script
-echo "[Script - Ubuntu 22.04] Installation de tous les outils nécessaires au développement"
+echo "[SCRIPT D'INSTALLATION] Installation de tous les outils nécessaires au développement"
 echo $separateLine
 echo "====> Les outils installable via ce script sont les suivants :"
-echo "--> Les outils de ligne de commandes : curl / wget / nano /zip / unzip / git / tree / libpcre3"
+echo "--> Les outils de ligne de commandes : curl / wget / nano /zip / unzip / git / tree / libpcre3 / net-tools"
 echo "--> Les kits de dév. : Python 3 / C / C++ / C# & .Net / Java / NodeJS & NPM / PHP (latest-8 ou 7.4) / Ruby"
+echo "--> Les applications de développement : Valet / Jenkins / GitLab CE"
+echo "NB : Valet peut être obsolète, à vérifier."
 echo $separateLine
 echo ""
 echo "- Installer tous les outils ? (y/n)"
@@ -60,6 +62,12 @@ else
     read choice
     if [ $choice = "y" ]
         then export libpcre3=true
+    fi
+
+    echo "- Installer net-tools ? (y/n)"
+    read choice
+    if [ $choice = "y" ]
+        then export net_tools=true
     fi
     
     echo "- Installer Python 3 ? (y/n)"
@@ -112,3 +120,6 @@ else
     /bin/bash ./ubuntu_install_packages.sh
     /bin/bash ./ubuntu_install_dev_kits.sh
 fi
+# Fin du script
+echo "[SCRIPT D'INSTALLATION] Installation des outils terminée"
+echo $separateLine
