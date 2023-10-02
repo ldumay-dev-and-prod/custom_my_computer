@@ -9,38 +9,38 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
 ## Sommaire
 
 - [1 - Liste des packages](#1---liste-des-packages)
-- [2 - Sur Windows](#1---sur-windows)
-- [3 - Sur Mac OS](#2---sur-mac-os)
-- [4 - Sur Linux](#3---sur-linux)
+- [2 - Sur Windows](#2---sur-windows)
+- [3 - Sur Mac OS](#3---sur-mac-os)
+- [4 - Sur Linux](#4---sur-linux)
 
 ## 1 - Liste des packages
 [Haut de page](#top)
 
 - Sur Windows
-    - [2.1 - Insllation de Composer & Php & Xdebug](#11---insllation-de-composer--php--xdebug)
+    - [2.1 - Insllation de Composer & Php & Xdebug](#21---insllation-de-composer--php--xdebug)
         - **php** & **xdebug** & **composer**
-        - [2.1.1 - Télécharger PHP 8.1 et Composer pour Windows](#111---télécharger-php-81-et-composer-pour-windows)
-        - [2.1.2 - Installation de PHP 8.1](#112---installation-de-php-81)
-        - [2.1.3 - Installer Composer et ajouter PHP 8.1 au Path](#113---installer-composer-et-ajouter-php-81-au-path)
-        - [2.1.4 - Installer Xedbug](#114---installer-xedbug)
-        - [2.1.5 - Activer OPcache](#115---activer-opcache)
-    - [2.2 - Vérifier l'installation de PHP 8.1 et Composer](#116---vérifier-linstallation-de-php-81-et-composer)
-        - [2.2.1 - PHP 8.1](#1161---php-81)
-        - [2.2.2 - Composer](#1162---composer)
+        - [2.1.1 - Télécharger PHP 8.1 et Composer pour Windows](#211---télécharger-php-81-et-composer-pour-windows)
+        - [2.1.2 - Installation de PHP 8.1](#212---installation-de-php-81)
+        - [2.1.3 - Installer Composer et ajouter PHP 8.1 au Path](#213---installer-composer-et-ajouter-php-81-au-path)
+        - [2.1.4 - Installer Xedbug](#214---installer-xedbug)
+        - [2.1.5 - Activer OPcache](#215---activer-opcache)
+    - [2.2 - Vérifier l'installation de PHP 8.1 et Composer](#216---vérifier-linstallation-de-php-81-et-composer)
+        - [2.2.1 - PHP 8.1](#2161---php-81)
+        - [2.2.2 - Composer](#2162---composer)
 - Sur Mac OS
-    - [3.1 - Xcode](#21---xcode)
-    - [3.2 - Homebrew](#22---homebrew)
-    - [3.3 - Packages utiles](#23---packages-utiles)
+    - [3.1 - Xcode](#31---xcode)
+    - [3.2 - Homebrew](#32---homebrew)
+    - [3.3 - Packages utiles](#33---packages-utiles)
         - Déjà sur Mac OS : **curl**
         - **zip** & **unzip** & **wget** & **nano** & **tree** & **git** & **gcc**
         - **composer** & **php** & **apcu** & **xdebug**
 - Sur Linux
-    - [4.1 - Présentation des scripts](#31---présentation-des-scripts)
+    - [4.1 - Présentation des scripts](#41---présentation-des-scripts)
         - **curl** & **wget** & **nano** & **zip** & **unzip** & **git** & **tree** & **libpcre3**
         - **python** & **c/c++** & **c#** & **java** & **nodejs** & **npm** & **php** & **composer** & **ruby**
-    - [4.2 - Script d'installation des packages](#32---script-dinstallation-des-packages)
-    - [4.3 - Script de vérification des packages installés](#33---script-de-vérification-des-packages-installés)
-    - [4.4 - Script de désinstallation des packages](#34---script-de-désinstallation-des-packages)
+    - [4.2 - Script d'installation des packages](#42---script-dinstallation-des-packages)
+    - [4.3 - Script de vérification des packages installés](#43---script-de-vérification-des-packages-installés)
+    - [4.4 - Script de désinstallation des packages](#44---script-de-désinstallation-des-packages)
 
 ## 2 - Sur Windows
 [Haut de page](#top)
@@ -372,6 +372,128 @@ pecl install apcu xdebug zip
     - `apcu` - est un système de cache de données en mémoire pour PHP
     - `xdebug` - est un débogueur pour PHP
 
+### 3.3 - Installer Xdebug et OPcache
+[Haut de page](#top)
+
+> Si besoin, la doc. **Xdebug** se trouve ici : [https://xdebug.org/docs/install#pecl](https://xdebug.org/docs/install).
+
+Afin de pouvoir installer **Xdebug** sur macOS, il est nécessaire d'avoir **Homebrew** et **PECL** d'installer.
+
+> **NB : PECL** est nativement installé sur macOS, tel que **PHP**.
+
+Vérifions cela :
+
+##### ==> **Hombrew** avec la commande `brew`.
+
+```
+~ % brew
+
+Example usage:
+  brew search TEXT|/REGEX/
+  brew info [FORMULA|CASK...]
+  brew install FORMULA|CASK...
+  brew update
+  brew upgrade [FORMULA|CASK...]
+  brew uninstall FORMULA|CASK...
+  brew list [FORMULA|CASK...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install --verbose --debug FORMULA|CASK
+
+Contributing:
+  brew create URL [--no-fetch]
+  brew edit [FORMULA|CASK...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+```
+
+##### ==> **PECL** avec la commande `pecl `
+
+```
+~ % pecl
+
+Commands:
+build                  Build an Extension From C Source
+bundle                 Unpacks a Pecl Package
+channel-add            Add a Channel
+channel-alias          Specify an alias to a channel name
+channel-delete         Remove a Channel From the List
+channel-discover       Initialize a Channel from its server
+channel-info           Retrieve Information on a Channel
+channel-login          Connects and authenticates to remote channel server
+channel-logout         Logs out from the remote channel server
+channel-update         Update an Existing Channel
+clear-cache            Clear Web Services Cache
+config-create          Create a Default configuration file
+config-get             Show One Setting
+config-help            Show Information About Setting
+config-set             Change Setting
+config-show            Show All Settings
+convert                Convert a package.xml 1.0 to package.xml 2.0 format
+cvsdiff                Run a "cvs diff" for all files in a package
+cvstag                 Set CVS Release Tag
+download               Download Package
+download-all           Downloads each available package from the default channel
+info                   Display information about a package
+install                Install Package
+list                   List Installed Packages In The Default Channel
+list-all               List All Packages
+list-channels          List Available Channels
+list-files             List Files In Installed Package
+list-upgrades          List Available Upgrades
+login                  Connects and authenticates to remote server [Deprecated in favor of channel-login]
+logout                 Logs out from the remote server [Deprecated in favor of channel-logout]
+makerpm                Builds an RPM spec file from a PEAR package
+package                Build Package
+package-dependencies   Show package dependencies
+package-validate       Validate Package Consistency
+pickle                 Build PECL Package
+remote-info            Information About Remote Packages
+remote-list            List Remote Packages
+run-scripts            Run Post-Install Scripts bundled with a package
+run-tests              Run Regression Tests
+search                 Search remote package database
+shell-test             Shell Script Test
+sign                   Sign a package distribution file
+svntag                 Set SVN Release Tag
+uninstall              Un-install Package
+update-channels        Update the Channel List
+upgrade                Upgrade Package
+upgrade-all            Upgrade All Packages [Deprecated in favor of calling upgrade with no parameters]
+Usage: pecl [options] command [command-options] <parameters>
+Type "pecl help options" to list all options.
+Type "pecl help shortcuts" to list all command shortcuts.
+Type "pecl help version" or "pecl version" to list version information.
+Type "pecl help <command>" to get the help for the specified command.
+```
+
+Une fois **PECL** et **HomeBrew** installés, il faut est maintenant possible d'installer **Xdebug** grâce à **PECL**
+
+```
+pecl install xdebug
+
+ou
+
+pecl install xdebug-<version>
+```
+
+> Pour **PHP** 7.1.33, la version 2.9.8 de **Xdebug** est bien compatible.
+> Nécessaire pour **Valet** non compatible avec **PHP** 7.2 ou +.
+
+L'installation devrais se terminée avec le message ci-dessous :
+
+```
+Build process completed successfully
+Installing '/usr/local/Cellar/php/8.1.5/pecl/20210902/xdebug.so'
+install ok: channel://pecl.php.net/xdebug-3.1.4
+Extension xdebug enabled in php.ini
+```
 
 ## 4 - Sur Linux
 [Haut de page](#top)
