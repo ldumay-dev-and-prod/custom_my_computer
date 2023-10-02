@@ -34,6 +34,8 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
         - Déjà sur Mac OS : **curl**
         - **zip** & **unzip** & **wget** & **nano** & **tree** & **git** & **gcc**
         - **composer** & **php** & **apcu** & **xdebug**
+    - [3.4 - Installer Xdebug et OPcache](#34---installer-xdebug-et-opcache)
+    - [3.5 - Gestion du service Php](#35---gestion-du-service-php)
 - Sur Linux
     - [4.1 - Présentation des scripts](#41---présentation-des-scripts)
         - **curl** & **wget** & **nano** & **zip** & **unzip** & **git** & **tree** & **libpcre3**
@@ -493,6 +495,67 @@ Build process completed successfully
 Installing '/usr/local/Cellar/php/8.1.5/pecl/20210902/xdebug.so'
 install ok: channel://pecl.php.net/xdebug-3.1.4
 Extension xdebug enabled in php.ini
+```
+
+### 3.4 - Activer OPcache
+
+Pour activer **OPcache**, il faut modifier le fichier de configuration de **PHP**.
+
+Pour cela, il faut trouver le fichier de configuration de **PHP**.
+
+```
+php -i | grep php.ini
+```
+
+> **NB :** Si vous avez plusieurs versions de **PHP** d'installer, il est nécessaire de trouver le fichier de configuration de la version de **PHP** que vous voulez modifier.
+
+Le fichier `php.ini` se trouve dans le dossier `/usr/local/etc/php/<votre_version>/`.
+
+Voici un exemple de résultat :
+
+```
+Configuration File (php.ini) Path => /usr/local/etc/php/8.1
+Loaded Configuration File => /usr/local/etc/php/8.1/php.ini
+```
+
+Une fois le fichier de configuration trouver, il faut l'ouvrir avec un éditeur de texte.
+
+```
+nano /usr/local/etc/php/8.1/php.ini
+```
+
+> **NB :** Si vous avez plusieurs versions de **PHP** d'installer, il est nécessaire de trouver le fichier de configuration de la version de **PHP** que vous voulez modifier.
+
+Une fois le fichier ouvert, il faut rechercher `zend_extension` et si il y a un `;` devant `zend_extension=xdebug`, retirer le.
+
+Vous dévrier obtenir cela :
+
+```
+opcache.memory_consumption=128
+opcache.interned_strings_buffer=8
+opcache.max_accelerated_files=4000
+opcache.revalidate_freq=60
+opcache.fast_shutdown=1
+opcache.enable_cli=1
+```
+
+### 3.5 - Gestion du service Php
+
+1. Démarrer le service Php :
+
+```
+apachectl start
+```
+2. Stopper le service Php :
+
+```
+apachectl stop
+```
+
+3. Redémarrer le service Php :
+
+```
+apachectl restart
 ```
 
 ## 4 - Sur Linux
