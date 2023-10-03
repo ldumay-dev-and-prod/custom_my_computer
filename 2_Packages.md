@@ -139,7 +139,7 @@ Dans le git, je propose une dossier composé d'un fichier php chargé de la fonc
 Render-vous dans le dossier :
 
 ```bash
-> cd phpinfo
+> cd src/phpinfo/
 ```
 
 Lancer une petit serveur HTTP avec php pour pouvoir lire la configuration lu par `phpinfo()`.
@@ -180,10 +180,10 @@ Voici une apperçu :
 Dans l'exemple :
 
 - **Instructions** :
-  - 1 Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
-  - 2 Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
-  - 3 Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
-  - 4 Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
+  - 1 - Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
+  - 2 - Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
+  - 3 - Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
+  - 4 - Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
 
 ![img](images/php_composer_xdebug/011.png)
 
@@ -631,14 +631,14 @@ Le script principal a pour but d'installer tous les outils nécessaires au déve
 Pour les utilisers, cloner le git sur votre machine et effectuer suiver les instructions ci-dessous.
 
 > **NB :**
-> - Les scripts sont disponibles dans le dossier `/scripts/installer/`.
+> - Les scripts sont disponibles dans le dossier `/src/scripts/installers/`.
 > - Les scripts sont à lancer en tant qu'utilisateur `root`.
 
 ### 4.2 - Script d'installation des packages
 
 Voici le script à lancer :
 
-> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+> Si ne c'est pas le cas, aller avant dans le dossier `/src/scripts/installers/` et lancer la commande ci-dessous :
 
 ```bash
 sudo sh ubuntu_install_full.sh                  
@@ -648,7 +648,7 @@ sudo sh ubuntu_install_full.sh
 
 Voici le script à lancer :
 
-> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+> Si ne c'est pas le cas, aller avant dans le dossier `/src/scripts/installers/` et lancer la commande ci-dessous :
 
 ```bash
 sudo sh ubuntu_install_dev_apps.sh
@@ -707,7 +707,7 @@ vim gitlab.rb
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 
-> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+> Si ne c'est pas le cas, aller avant dans le dossier `/src/scripts/installers/` et lancer la commande ci-dessous :
 
 ```bash
 sudo sh ubuntu_check_version.sh
@@ -717,7 +717,7 @@ sudo sh ubuntu_check_version.sh
 
 Le script ci-dessous désinstallera tous les outils installés dans la liste décrite en haut de la description.
 
-> Si ne c'est pas le cas, aller avant dans le dossier `/scripts/installer/` et lancer la commande ci-dessous :
+> Si ne c'est pas le cas, aller avant dans le dossier `/src/scripts/installers/` et lancer la commande ci-dessous :
 
 ```bash
 sudo sh ubuntu_uninstall_full.sh

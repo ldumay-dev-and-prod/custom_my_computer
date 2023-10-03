@@ -35,7 +35,9 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
     - Pour **Linux** : _**❌ A venir...**_
 - Bonus 0 - Packages et commandes
     - [Packages et commandes](Bonus0_Packages_and_commands.md)
-- Bonus 1 - OS et machines virtuelles (VM)
+- Bonus 1 - Rainmeter pour Windows
+    - [Rainmeter](Bonus1_Rainmeter.md) - _**📝 En cours**_
+- Bonus 2 - OS et machines virtuelles (VM)
     - [Sources OS](Bonus1_0_Sources_OS.md)
     - [VirtualBox](Bonus1_1_Virtualbox.md)
     - [VM - Debian - Installation de Debian](Bonus1_2_Install_debian.md)
