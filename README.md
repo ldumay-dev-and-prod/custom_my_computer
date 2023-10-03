@@ -38,8 +38,8 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
 - Bonus 1 - Rainmeter pour Windows
     - [Rainmeter](Bonus1_Rainmeter.md) - _**📝 En cours**_
 - Bonus 2 - OS et machines virtuelles (VM)
-    - [Sources OS](Bonus1_0_Sources_OS.md)
-    - [VirtualBox](Bonus1_1_Virtualbox.md)
-    - [VM - Debian - Installation de Debian](Bonus1_2_Install_debian.md)
-    - [VM - Ubuntu Desktop](Bonus1_3_install_ubuntu-desktop.md)
-    - [VM - Ubuntu Server](Bonus1_4_install_ubuntu-server.md)
+    - [Sources OS](Bonus2_0_Sources_OS.md)
+    - [VirtualBox](Bonus2_1_Virtualbox.md)
+    - [VM - Debian - Installation de Debian](Bonus2_2_Install_debian.md)
+    - [VM - Ubuntu Desktop](Bonus2_3_install_ubuntu-desktop.md)
+    - [VM - Ubuntu Server](Bonus2_4_install_ubuntu-server.md)
