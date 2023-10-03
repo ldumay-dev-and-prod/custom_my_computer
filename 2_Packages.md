@@ -51,61 +51,95 @@ Afin de pouvoir développer dans de bonnes conditions, il est nécessaire d'inst
 ### 2.1 - Insllation de Composer & Php & Xdebug
 [Haut de page](#top)
 
-#### 2.1.1 - Télécharger PHP 8.1 et Composer pour Windows
+#### 2.1.1 - Télécharger PHP
 [Haut de page](#top)
 
-- Télécharger PHP 8.1 :
-    - [Zip VS16 x64 Thread Safe](https://windows.php.net/download/).
-- Télécharger Composer :
-    - [Composer-Setup.exe](https://getcomposer.org/download/)
-
-#### 2.1.2 - Installation de PHP 8.1
+##### 2.1.1.1 - Installation de PHP en ligne de commande
 [Haut de page](#top)
 
-Décompresser et copier les contenu de fichier **zip** dans un nouvau dossier : `C:\php\8.1.10`.
+_**A - Installation de Chocolatey**_
 
-#### 2.1.3 - Installer Composer et ajouter PHP 8.1 au Path
+Pour pouvoir installer PHP 8.1 en ligne de commande, il est nécessaire d'installer **Chocolatey**.
+Pour ce faire, exécuter la commande ci-dessous dans le **PowerShell** en tant qu'**Administrateur**.
+
+```bash
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+_**B - Installation de Php**_
+
+Après avoir installer **Chocolatey**, il est possible d'installer **Php** en ligne de commande.
+Pour ce faire, exécuter la commande ci-dessous dans le **PowerShell** en tant qu'**Administrateur**.
+
+```bash
+cd ~/Downloads/
+Invoke-WebRequest -URI https://windows.php.net/downloads/releases/php-7.4.33-Win32-vc15-x64.zip -OutFile php-7.4.33-Win32-vc15-x64.zip
+Expand-Archive php-7.4.33-Win32-vc15-x64.zip -DestinationPath php-7.4.33
+rm -r php-7.4.33-Win32-vc15-x64.zip
+mkdir php
+move php-7.4.33 php/php-7.4.33/
+move php C:/php
+cd C:/php
+ls
+```
+
+##### 2.1.1.2 - Installation de PHP avec le zip
 [Haut de page](#top)
+
+Télécharger PHP : [Zip VS16 x64 Thread Safe](https://windows.php.net/download/).
+
+Décompresser et copier les contenu de fichier **zip** dans un nouvau dossier : `C:\php\<version>\`.
+
+#### 2.1.2 - Installer Composer et ajouter PHP au Path
+[Haut de page](#top)
+
+Télécharger Composer : [Composer-Setup.exe](https://getcomposer.org/download/)
 
 Executer le fichier **Composer-Setup.exe**
 
 ![img](images/php_composer_xdebug/001.png)
 
-Choisissez votre choix d'installation.
+Choisissez votre choix d'installation et cocher le mode **developper**.
 
 ![img](images/php_composer_xdebug/002.png)
 
-Choisissez le mode **developper** si vous voulez plus 😉 (j'ai pas test encore, déso 😁).
+Sélectionner le dossier d'installation de PHP.
 
-![img](images/php_composer_xdebug//003.png" max-with="330px"/>
+![img](images/php_composer_xdebug/003.png)
 
-Normalement, l'installeur de composer détecte de lui-même l'installation de php. Si ce n'est pas le cas, choisissez le dossier en question ou réinstaller PHP.
-
-De plus, si cela n'est pas le cas, Composer vous propose d'ajouter PHP à votre Path (une des variables de votre environement de développement).
+> **Note :**
+> - Normalement, l'installeur de composer détecte de lui-même l'installation de php. Si ce n'est pas le cas, choisissez le dossier en question ou réinstaller PHP.
+> - De plus, si cela n'est pas le cas, Composer vous propose d'ajouter PHP à votre Path (une des variables de votre environement de développement).
 
 Cela vous permettra d'accéder à Php via une console.
 
 ![img](images/php_composer_xdebug/004.png)
 
-Non testé 🤷‍♂️😜.
+Dans le cas où vous souhaiteriez ajouté un proxy, cela est possible.
 
 ![img](images/php_composer_xdebug/005.png)
 
 Lance maintenant l'installation.
 
-![img](images/php_composer_xdebug/006.png)
+![img](images/php_composer_xdebug/006.1.png)
+
+Petit message ...
+
+![img](images/php_composer_xdebug/006.2.png)
 
 Voilà, c'est finis. 💪
 
-#### 2.1.4 - Installer Xedbug
+![img](images/php_composer_xdebug/006.3.png)
+
+#### 2.1.3 - Installer Xedbug
 [Haut de page](#top)
 
 Dans le git, je propose une dossier composé d'un fichier php chargé de la fonction `phpinfo()` dont à besion pour vérifié la version et l'installation de notre PHP.
 
-Rener-vous dans le dossier :
+Render-vous dans le dossier :
 
 ```bash
-> cd .\guide_php_composer_xdebug\phpinfo\
+> cd phpinfo
 ```
 
 Lancer une petit serveur HTTP avec php pour pouvoir lire la configuration lu par `phpinfo()`.
@@ -146,10 +180,11 @@ Voici une apperçu :
 Dans l'exemple :
 
 - **Instructions** :
-  1. Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
-  2. Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
-  3. Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
-  4. Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
+
+1. Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
+2. Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
+3. Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
+4. Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
 
 ![img](images/php_composer_xdebug/011.png)
 
@@ -171,7 +206,7 @@ Dans l'exemple :
 
 Voilà, Xdebug est installé. 😎💪
 
-#### 2.1.5 - Activer OPcache
+#### 2.1.4 - Activer OPcache
 [Haut de page](#top)
 
 Rechercher `zend_extension` et si il y a un `;` devant `zend_extension=xdebug`, retirer le.
@@ -240,6 +275,8 @@ Zend Engine v4.1.10, Copyright (c) Zend Technologies
 ```
 
 #### 2.2.2 - Composer
+
+Vérifier si composer est bien installé :
 
 ```bash
 > composer -v
