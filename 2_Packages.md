@@ -180,11 +180,10 @@ Voici une apperçu :
 Dans l'exemple :
 
 - **Instructions** :
-
-1. Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
-2. Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
-3. Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
-4. Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
+  - 1 Download **php_xdebug-3.1.5-7.4-vc15-x86_64.dll**
+  - 2 Move the downloaded file to `c:\wamp64\bin\php\php7.4.26\ext`, and rename it to `php_xdebug.dll`
+  - 3 Mettez à jour `C:\wamp64\bin\php\php7.4.26\php.ini` et ajouté la ligne : `zend_extension = xdebug`
+  - 4 Redémarrer le serveur HTTP intégré de PHP : `php -S localhost:8080`
 
 ![img](images/php_composer_xdebug/011.png)
 
