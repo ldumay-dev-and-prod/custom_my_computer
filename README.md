@@ -21,7 +21,7 @@ Ce projet à pour simple but de partager un ensemble de nécessaire pour PC sous
     - Pour **Windows** :  _**✅ Terminé**_
     - Pour **Mac OS** : _**✅ Terminé**_
     - Pour **Linux** : _**❌ A venir...**_
-- [4 - Personnalisation du terminal](4_Terminal.md)
+- [4 - Ajout d'options du terminal](4_Terminal.md)
     - Pour **Windows** : _**❌ A venir...**_
     - Pour **Mac OS** : _**✅ Terminé**_
     - Pour **Linux** : _**❌ A venir...**_

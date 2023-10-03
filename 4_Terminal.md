@@ -2,7 +2,7 @@
 
 [<== Revenir à la page principale du projet](../../)
 
-# Personnalisation du terminal
+# Ajout d'options du terminal
 
 ## Sommaire
 
